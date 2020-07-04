@@ -10,3 +10,7 @@ Install psql
 
 Run Materialize
 `materialized --w=1`{{execute}}
+
+Connect to Materialize
+`psql -h localhost -p 6875 materialize`{{execute}}
+
