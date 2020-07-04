@@ -6,11 +6,11 @@ CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
 
 ```
 SELECT * FROM pseudo_source;
-```{{execute Terminal 2}}
+```{{execute}}
 
 ```
 SELECT key, sum(value) FROM pseudo_source GROUP BY key;
-```{{execute Terminal 2}}
+```{{execute T2}}
 
 ```
 CREATE MATERIALIZED VIEW key_sums AS

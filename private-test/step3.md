@@ -2,11 +2,19 @@
 while true; do
   curl --max-time 9999999 -N https://stream.wikimedia.org/v2/stream/recentchange >> wikirecent
 done
-```{{execute Terminal 3}}
+```{{execute T3}}
 
+<pre>
 ```
 CREATE SOURCE wikirecent
 FROM FILE '[path to wikirecent]' WITH (tail = true)
+FORMAT REGEX '^data: (?P<data>.*)';
+```
+</pre>
+
+```
+CREATE SOURCE wikirecent
+FROM FILE '/root/wikirecent' WITH (tail = true)
 FORMAT REGEX '^data: (?P<data>.*)';
 ```{{execute Terminal 2}}
 
