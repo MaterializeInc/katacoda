@@ -47,18 +47,18 @@ CREATE MATERIALIZED VIEW recentchanges AS
         val->>'user' AS user,
         val->>'wiki' AS wiki
     FROM (SELECT data::jsonb AS val FROM wikirecent);
-```{{execute T3}}
+```{{execute T2}}
 
 ```
 CREATE MATERIALIZED VIEW counter AS
     SELECT COUNT(*) FROM recentchanges;
-```{{execute T3}}
+```{{execute T2}}
 
 
 ```
 CREATE MATERIALIZED VIEW useredits AS
     SELECT user, count(*) FROM recentchanges GROUP BY user;
-```{{execute T3}}
+```{{execute T2}}
 
 
 ```
@@ -68,9 +68,9 @@ SELECT * FROM useredits ORDER BY count DESC;
 ```
 CREATE MATERIALIZED VIEW top10 AS
     SELECT * FROM useredits ORDER BY count DESC LIMIT 10;
-```{{execute T3}}
+```{{execute T2}}
 
 ```
 SELECT * FROM top10 ORDER BY count DESC;
-```{{execute T3}}
+```{{execute T2}}
 

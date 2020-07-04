@@ -1,6 +1,6 @@
 {
   "title": "Private Repo Test",
-  "description": "Testing Materialize Docker Repor",
+  "description": "Materialize Demo (https://materialize.io/docs/get-started/)",
   "difficulty": "Beginner",
   "time": "1.5 hour",
   "details": {
@@ -11,7 +11,8 @@
       },
       {
         "title": "Step 2",
-        "text": "step2.md"
+        "text": "step2.md",
+        "code": "step2-foreground.sh"
       },
       {
         "title": "Step 3",
@@ -29,8 +30,7 @@
   "environment": {
     "hideintro": true,
     "terminals": [
-        {"name": "Terminal 2", "target": "host01"},
-        {"name": "Docker Stats", "command": "docker stats", "target": "host01"}
+        {"name": "Terminal 2", "target": "host01"}
     ],
     "uilayout": "terminal"
   },
