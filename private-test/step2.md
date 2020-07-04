@@ -1,3 +1,7 @@
+Connect to Materialize
+`psql -h localhost -p 6875 materialize`{{execute}}
+
+
 ```
 CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
     VALUES ('a', 1), ('a', 2), ('a', 3), ('a', 4),
