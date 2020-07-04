@@ -1,9 +1,9 @@
 Install Materialize
 
 `curl -L https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu.tar.gz \
-    | tar -xzC /usr/local --strip-components=1`
+    | tar -xzC /usr/local --strip-components=1`{{execute}}
 
 Install psql
-`sudo apt-get update`
-`sudo apt-get install postgresql-client`
+`sudo apt-get update`{{execute}}
+`sudo apt-get install postgresql-client`{{execute}}
 
