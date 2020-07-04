@@ -16,11 +16,11 @@ FORMAT REGEX '^data: (?P<data>.*)';
 CREATE SOURCE wikirecent
 FROM FILE '/root/wikirecent' WITH (tail = true)
 FORMAT REGEX '^data: (?P<data>.*)';
-```{{execute T3}}
+```{{execute T2}}
 
 ```
 SHOW COLUMNS FROM wikirecent;
-```{{execute T3}}
+```{{execute}}
 
 ```
 CREATE MATERIALIZED VIEW recentchanges AS
