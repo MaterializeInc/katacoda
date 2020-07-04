@@ -17,3 +17,11 @@ SELECT * FROM pseudo_source;
 
 `CREATE MATERIALIZED VIEW lhs (key, value) AS
     VALUES ('x', 'a'), ('y', 'b'), ('z', 'c');`{{execute Terminal 2}}
+
+```
+SELECT lhs.key, sum(rhs.value)
+FROM lhs
+JOIN pseudo_source AS rhs
+ON lhs.value = rhs.key
+GROUP BY lhs.key;
+```
