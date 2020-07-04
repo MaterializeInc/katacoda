@@ -1,8 +1,12 @@
-`CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
+```
+CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
     VALUES ('a', 1), ('a', 2), ('a', 3), ('a', 4),
-    ('b', 5), ('c', 6), ('c', 7);`{{execute Terminal 2}}
+    ('b', 5), ('c', 6), ('c', 7);
+```{{execute Terminal 2}}
 
-`SELECT * FROM pseudo_source;`{{execute Terminal 2}}
+```
+SELECT * FROM pseudo_source;
+```{{execute Terminal 2}}
 
 `SELECT key, sum(value) FROM pseudo_source GROUP BY key;`{{execute Terminal 2}}
 
