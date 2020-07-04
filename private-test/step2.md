@@ -4,13 +4,9 @@ CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
     ('b', 5), ('c', 6), ('c', 7);
 ```{{execute}}
 
-```
-SELECT * FROM pseudo_source;
-```{{execute}}
+`SELECT * FROM pseudo_source;`{{execute}}
 
-```
-SELECT key, sum(value) FROM pseudo_source GROUP BY key;
-```{{execute T2}}
+`SELECT key, sum(value) FROM pseudo_source GROUP BY key;`{{execute T2}}
 
 ```
 CREATE MATERIALIZED VIEW key_sums AS
