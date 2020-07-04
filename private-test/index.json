@@ -19,8 +19,9 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
-    },
+        "text": "intro.md",
+        "courseData": "background.sh"
+    }
     "finish": {
       "text": "finish.md"
     }
