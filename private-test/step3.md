@@ -16,11 +16,11 @@ FORMAT REGEX '^data: (?P<data>.*)';
 CREATE SOURCE wikirecent
 FROM FILE '/root/wikirecent' WITH (tail = true)
 FORMAT REGEX '^data: (?P<data>.*)';
-```{{execute Terminal 2}}
+```{{execute T3}}
 
 ```
 SHOW COLUMNS FROM wikirecent;
-```{{execute Terminal 2}}
+```{{execute T3}}
 
 ```
 CREATE MATERIALIZED VIEW recentchanges AS
@@ -47,4 +47,4 @@ CREATE MATERIALIZED VIEW recentchanges AS
         val->>'user' AS user,
         val->>'wiki' AS wiki
     FROM (SELECT data::jsonb AS val FROM wikirecent);
-```{{execute Terminal 2}}
+```{{execute T3}}

@@ -1,3 +1,5 @@
+# todo: no way to for a command to a different term without breaking spacing?
+
 Connect to Materialize
 `psql -h localhost -p 6875 materialize`{{execute}}
 
@@ -15,17 +17,17 @@ CREATE MATERIALIZED VIEW pseudo_source (key, value) AS
 ```
 CREATE MATERIALIZED VIEW key_sums AS
     SELECT key, sum(value) FROM pseudo_source GROUP BY key;
-```{{execute Terminal 2}}
+```{{execute}}
 
 ```
 SELECT sum(sum) FROM key_sums;
-```{{execute Terminal 2}}
+```{{execute}}
 
 
 ```
 CREATE MATERIALIZED VIEW lhs (key, value) AS
     VALUES ('x', 'a'), ('y', 'b'), ('z', 'c');
-```{{execute Terminal 2}}
+```{{execute}}
 
 ```
 SELECT lhs.key, sum(rhs.value)
@@ -33,4 +35,4 @@ FROM lhs
 JOIN pseudo_source AS rhs
 ON lhs.value = rhs.key
 GROUP BY lhs.key;
-```{{execute Terminal 2}}
+```{{execute}}
