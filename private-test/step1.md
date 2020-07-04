@@ -5,5 +5,8 @@ Install Materialize
 
 Install psql
 `sudo apt-get update`{{execute}}
-`sudo apt-get install postgresql-client`{{execute}}
+`sudo apt-get install -y postgresql-client`{{execute}}
 
+
+Run Materialize
+`materialized --w=1`{{execute}}

@@ -30,7 +30,7 @@
         {"name": "Terminal 2", "target": "host01"},
         {"name": "Docker Stats", "command": "docker stats", "target": "host01"}
     ],
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu1804"
