@@ -63,7 +63,7 @@ CREATE MATERIALIZED VIEW useredits AS
 
 ```
 SELECT * FROM useredits ORDER BY count DESC;
-```{{execute T3}}
+```{{execute T2}}
 
 ```
 CREATE MATERIALIZED VIEW top10 AS
