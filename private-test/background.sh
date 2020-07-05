@@ -7,3 +7,6 @@ curl -L https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu
 sudo apt-get update
 
 sudo apt-get install -y postgresql-client
+
+echo "done" >> /root/katacoda-finished
+echo "done" >> /root/katacoda-background-finished
