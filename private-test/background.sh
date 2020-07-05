@@ -6,3 +6,4 @@ curl -L https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu
 # todo: move this to foreground for step2?
 sudo apt-get update
 
+sudo apt-get install -y postgresql-client

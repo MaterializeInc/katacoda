@@ -11,15 +11,22 @@
       },
       {
         "title": "Step 2",
-        "text": "step2.md"
+        "text": "step2.md",
+        "courseData": "step2-background.sh"
       },
       {
         "title": "Step 3",
         "text": "step3.md"
       }
     ],
+    "assets": {
+        "host01": [
+            {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
+    }
     "intro": {
-        "text": "intro.md"
+        "text": "intro.md",
+        "courseData": "background.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -33,6 +40,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "alwang/materialize:0.3.1"
+    "imageid": "ubuntu1804"
   }
 }
