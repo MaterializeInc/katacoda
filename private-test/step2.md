@@ -1,6 +1,4 @@
-# todo: no way to for a command to a different term without breaking spacing?
-
-Connect to Materialize
+Next, connect to Materialize in a separate terminal:
 `psql -h localhost -p 6875 materialize`{{execute T2}}
 
 
