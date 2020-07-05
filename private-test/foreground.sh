@@ -6,10 +6,5 @@ curl -L https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu
 # todo: move this to foreground for step2?
 sudo apt-get update
 
-sudo apt-get install -y postgresql-client
+sudo apt-get install -y postgresql-client && echo "Installation complete! You can now go ahead and run Materialize: " && echo "   materialized --w=1  "
 
-echo "Installation complete! You can now go ahead and run Materialize: "
-echo "   materialized --w=1  "
-
-echo "done" >> /root/katacoda-finished
-echo "done" >> /root/katacoda-background-finished
