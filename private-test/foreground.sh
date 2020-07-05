@@ -10,3 +10,5 @@ sudo apt-get install -y postgresql-client
 
 echo "done" >> /root/katacoda-finished
 echo "done" >> /root/katacoda-background-finished
+echo "Installation complete! You can now go ahead and run Materialize: "
+echo "   materialized --w=1  "
