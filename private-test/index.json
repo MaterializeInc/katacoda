@@ -23,7 +23,7 @@
         "host01": [
             {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
-    }
+    },
     "intro": {
         "text": "intro.md",
         "courseData": "background.sh"
