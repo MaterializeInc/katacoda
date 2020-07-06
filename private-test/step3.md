@@ -101,6 +101,5 @@ in continuing to explore it, you can check out the stream's documentation from
 Wikipedia.
 
 
-Next Steps -- if you'd like to learn more:
-[Next, see how Materialize can work as an entire microservices →](/docs/demos/microservice)
+Next, [see how Materialize can work as an entire microservices →](https://materialize.io/docs/demos/microservice/)
 
