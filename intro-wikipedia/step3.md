@@ -4,7 +4,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
 
 1. We'll set up a stream of Wikipedia's recent changes, and simply write all data that we see to a file.
 
-    From your shell, run:
+    From your shell, run in a new terminal:
     ```
     while true; do
       curl --max-time 9999999 -N https://stream.wikimedia.org/v2/stream/recentchange >> wikirecent
@@ -21,7 +21,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     FORMAT REGEX '^data: (?P<data>.*)';
     ```{{execute T2}}
 
-    (We've filled in <path to wikirecent> for you as "/root/wikirecent")
+    (We've filled in the path to wikirecent for you as "/root/wikirecent")
 
     This source takes the lines from the stream, finds those that begins with `data:`, and then captures the rest of the line in a column called `data`
 
@@ -60,9 +60,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
         FROM (SELECT data::jsonb AS val FROM wikirecent);
     ```{{execute T2}}
 
-
-
-1. For the next steps, let's firstturn on timing, which displays the runtime of each SQL command.
+1. For the next steps, let's first turn on timing, which displays the runtime of each SQL command.
 
     ```sql
     \timing
@@ -86,7 +84,7 @@ to keep this value updated by creating a materialized view:
 1. Now, selecting from this materialized view is much faster:
 
    ```sql
-   SELECT * FROM counter
+   SELECT * FROM counter;
    ```{{execute T2}}
 
 1. We can also see more interesting things from our stream. For instance, who are making the most changes to Wikipedia?
