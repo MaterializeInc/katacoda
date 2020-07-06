@@ -1,6 +1,6 @@
 {
   "title": "Materialize Demo",
-  "description": "https://materialize.io/docs/get-started",
+  "description": "A basic introduction to Materialize, a streaming database for real-time applications.",
   "difficulty": "Beginner",
   "time": ".5 hour",
   "details": {
