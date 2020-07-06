@@ -15,8 +15,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
 
 1. From within the CLI, create a source from the `wikirecent` file:
 
-
-    ```
+    ```sql
     CREATE SOURCE wikirecent
     FROM FILE '/root/wikirecent' WITH (tail = true)
     FORMAT REGEX '^data: (?P<data>.*)';
