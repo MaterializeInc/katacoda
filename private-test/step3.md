@@ -22,7 +22,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     FORMAT REGEX '^data: (?P<data>.*)';
     ```{{execute T2}}
 
-    (We've filled in <path to wikirecent> for you as `/root/wikirecent`)
+    (We've filled in <path to wikirecent> for you as "/root/wikirecent")
 
     This source takes the lines from the stream, finds those that begins with `data:`, and then captures the rest of the line in a column called `data`
 
