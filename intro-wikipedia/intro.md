@@ -4,4 +4,4 @@ To help you get started with Materialize, we'll:
 
 - Install, run, and connect to Materialize
 - Explore its API
-- Set up a real-time stream to perform aggregations on
+- Set up a real-time stream to perform aggregations on Wikipedia user edits
