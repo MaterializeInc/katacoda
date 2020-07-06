@@ -81,6 +81,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     ```sql
     SELECT * FROM useredits ORDER BY count DESC;
     ```{{execute T2}}
+    (hit 'q' to exit a paginated query)
 
 1. If this is a factoid we often want to know, we could also create a view of just the top 10 editors we've seen.
 
