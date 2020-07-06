@@ -60,14 +60,36 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
         FROM (SELECT data::jsonb AS val FROM wikirecent);
     ```{{execute T2}}
 
-1. From here we can start building our aggregations. The simplest place to start is simply counting the number of items we've seen:
+
+
+1. For the next steps, let's firstturn on timing, which displays the runtime of each SQL command.
+
+    ```sql
+    \timing
+    ```{{execute T2}}
+
+1. From our view we can start building our aggregations. The simplest place to start is simply counting the number of items we've seen:
+
+    ```sql
+    SELECT COUNT(*) FROM recentchanges;
+    ```{{execute T2}}
+
+1. This is fast, but over time, as our data grows, this will get
+slower. If we want to return to this result, we can tell Materialize
+to keep this value updated by creating a materialized view:
 
     ```sql
     CREATE MATERIALIZED VIEW counter AS
         SELECT COUNT(*) FROM recentchanges;
     ```{{execute T2}}
 
-1. However,  we can also see more interesting things from our stream. For instance, who are making the most changes to Wikipedia?
+1. Now, selecting from this materialized view is much faster:
+
+   ```sql
+   SELECT * FROM counter
+   ```{{execute T2}}
+
+1. We can also see more interesting things from our stream. For instance, who are making the most changes to Wikipedia?
 
     ```sql
     CREATE MATERIALIZED VIEW useredits AS
@@ -79,7 +101,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     ```{{execute T2}}
     (hit 'q' to exit a paginated query)
 
-1. If this is a factoid we often want to know, we could also create a view of just the top 10 editors we've seen.
+1. We can also create new views downstream of existing views, for instance, if we are interested in a top 10 leaderboard:
 
     ```sql
     CREATE MATERIALIZED VIEW top10 AS
@@ -92,10 +114,10 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     SELECT * FROM top10 ORDER BY count DESC;
     ```{{execute T2}}
 
-Naturally, there are many interesting views of this data. If you're interested
-in continuing to explore it, you can check out the stream's documentation from
-Wikipedia.
+Naturally, there are many interesting views of this data. If you're
+interested in continuing to explore it, you can check out the stream's
+documentation [from
+Wikipedia](https://stream.wikimedia.org/?doc#/Streams/get_v2_stream_recentchange).
 
 
 Next, [see how Materialize can work as an entire microservices →](https://materialize.io/docs/demos/microservice/)
-
