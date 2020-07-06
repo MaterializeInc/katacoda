@@ -31,7 +31,7 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
     SHOW COLUMNS FROM wikirecent;
     ```{{execute T2}}
 
-1. Because this stream comes in as JSON, we'll need to normalize the data to perform aggregations on it. Materialize offers the ability to do this easily using our built-in [`jsonb` functions](/sql/functions/#json).
+1. Because this stream comes in as JSON, we'll need to normalize the data to perform aggregations on it. Materialize offers the ability to do this easily using our built-in [`jsonb` functions](https://materialize.io/docs/sql/functions/#json).
 
     ```sql
     CREATE MATERIALIZED VIEW recentchanges AS
