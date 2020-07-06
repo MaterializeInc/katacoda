@@ -15,17 +15,13 @@ Materialize is built to handle streams of data, and provide incredibly low-laten
 
 1. From within the CLI, create a source from the `wikirecent` file:
 
-    <pre>
-    CREATE SOURCE wikirecent
-    FROM FILE '[path to wikirecent]' WITH (tail = true)
-    FORMAT REGEX '^data: (?P<data>.*)';
-    </pre>
 
     ```
     CREATE SOURCE wikirecent
     FROM FILE '/root/wikirecent' WITH (tail = true)
     FORMAT REGEX '^data: (?P<data>.*)';
     ```{{execute T2}}
+    (We've filled in <path to wikirecent> for you as `/root/wikirecent`)
 
     This source takes the lines from the stream, finds those that begins with `data:`, and then captures the rest of the line in a column called `data`
 
