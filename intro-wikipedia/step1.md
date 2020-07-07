@@ -24,5 +24,5 @@ Install psql
 Once the installation is complete, run Materialize:
 `materialized --w=1`{{execute}}
 
-**Pro-tip:** clicking on the command will run it automatically for you in Katacoda!
+**Pro-tip:** clicking on a command will run it automatically for you in Katacoda!
 
