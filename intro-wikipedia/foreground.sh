@@ -1,1 +1,1 @@
-/usr/local/bin/setup.sh
+sleep 1 && setup.sh
