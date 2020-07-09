@@ -20,7 +20,7 @@
     ],
     "assets": {
         "host01": [
-            {"file": "setup", "target": "/usr/local/bin/", "chmod": "+x"}
+            {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     },
     "intro": {
