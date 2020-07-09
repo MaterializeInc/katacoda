@@ -1,1 +1,1 @@
-sleep 1 && setup.sh
+sleep 2 && setup.sh
