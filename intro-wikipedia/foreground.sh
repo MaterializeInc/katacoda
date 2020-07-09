@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-
-setup.sh
+/usr/local/bin/setup.sh
