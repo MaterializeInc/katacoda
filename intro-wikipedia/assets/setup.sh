@@ -4,8 +4,8 @@ set -euo pipefail
 
 pkgs=(
     p/postgresql-common/postgresql-client-common_190ubuntu0.1_all.deb
-    p/postgresql-10/libpq5_10.12-0ubuntu0.18.04.1_amd64.deb
-    p/postgresql-10/postgresql-client-10_10.12-0ubuntu0.18.04.1_amd64.deb
+    p/postgresql-10/libpq5_10.14-0ubuntu0.18.04.1_amd64.deb
+    p/postgresql-10/postgresql-client-10_10.14-0ubuntu0.18.04.1_amd64.deb
 )
 
 echo "Installing PostgreSQL..."
