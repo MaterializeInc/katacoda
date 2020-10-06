@@ -3,10 +3,11 @@
 set -euo pipefail
 
 # Prevent package installation from updating the man-db, which is slow.
+echo "Configuring system..."
 apt-get remove --purge man-db -qy > /dev/null
 
 echo "Installing PostgreSQL..."
-for pkg in assets/*; do
+for pkg in /usr/local/pkg/*; do
     dpkg -i "$pkg"
 done
 

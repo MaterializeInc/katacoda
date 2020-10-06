@@ -20,7 +20,10 @@
     ],
     "assets": {
         "host01": [
-            {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+            {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "libpq5_10.14-0ubuntu0.18.04.1_amd64.deb", "target": "/usr/local/dpkg"},
+            {"file": "postgresql-client-10_10.14-0ubuntu0.18.04.1_amd64.deb", "target": "/usr/local/dpkg"},
+            {"file": "postgresql-client-common_190ubuntu0.1_all.deb", "target": "/usr/local/dpkg"}
         ]
     },
     "intro": {
