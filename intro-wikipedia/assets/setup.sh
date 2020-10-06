@@ -9,7 +9,7 @@ pkgs=(
 )
 
 # Prevent package installation from updating the man-db, which is slow.
-apt-get remove --purge man-db -qy
+apt-get remove --purge man-db -qy > /dev/null
 
 echo "Installing PostgreSQL..."
 for pkg in "${pkgs[@]}"; do
@@ -18,7 +18,7 @@ for pkg in "${pkgs[@]}"; do
 done
 
 echo "Installing Materialize..."
-curl -fsSL https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu.tar.gz \
+curl -fsSL https://downloads.mtrlz.dev/materialized-v0.4.3-x86_64-unknown-linux-gnu.tar.gz \
     | tar -xzC /usr/local --strip-components=1
 
 echo "Installation complete! You can now go ahead and run Materialize:"
