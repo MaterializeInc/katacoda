@@ -7,7 +7,7 @@ echo "Configuring system..."
 apt-get remove --purge man-db -qy > /dev/null
 
 echo "Installing PostgreSQL..."
-for pkg in /usr/local/pkg/*; do
+for pkg in /usr/local/dpkg/*; do
     dpkg -i "$pkg"
 done
 
