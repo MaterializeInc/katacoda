@@ -9,7 +9,7 @@ pkgs=(
 )
 
 # Prevent package installation from updating the man-db, which is slow.
-apt-get remove --purge man-db
+apt-get remove --purge man-db -qy
 
 echo "Installing PostgreSQL..."
 for pkg in "${pkgs[@]}"; do
