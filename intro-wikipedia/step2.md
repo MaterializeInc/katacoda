@@ -1,6 +1,6 @@
 Next, connect to Materialize in a separate terminal:
 
-`psql -h localhost -p 6875 materialize`{{execute T2}}
+`psql -U materialize -h localhost -p 6875 materialize`{{execute T2}}
 
 
 
