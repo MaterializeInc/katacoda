@@ -12,7 +12,7 @@ To help you get started with Materialize, we'll:
 
 (These steps are being run for you automatically)
 
-`curl -L https://downloads.mtrlz.dev/materialized-v0.3.1-x86_64-unknown-linux-gnu.tar.gz \
+`curl -L https://binaries.materialize.com/materialized-latest-x86_64-unknown-linux-gnu.tar.gz \
     | tar -xzC /usr/local --strip-components=1`{{execute}}
 
 Install psql
