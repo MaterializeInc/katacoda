@@ -20,7 +20,7 @@ done
 echo "Installing Materialize..."
 version=$(curl -fsSL https://materialize.io/docs/versions.json | jq -r .[0].name)
 echo "Latest stable release: $version"
-curl -fsSL https://downloads.mtrlz.dev/materialized-"$version"-x86_64-unknown-linux-gnu.tar.gz \
+curl -fsSL https://binaries.materialize.com/materialized-"$version"-x86_64-unknown-linux-gnu.tar.gz \
     | tar -xzC /usr/local --strip-components=1
 
 echo "Installation complete! You can now go ahead and run Materialize:"
